@@ -35,4 +35,29 @@ document.addEventListener('DOMContentLoaded', function() {
             profileText.style.transform = 'translateY(0)';
         }, 500);
     }
+
+    // Add smooth navigation for offcanvas menu
+    const navLinks = document.querySelectorAll('.offcanvas .nav-link');
+    const offcanvas = document.querySelector('.offcanvas');
+    const bsOffcanvas = new bootstrap.Offcanvas(offcanvas);
+    
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const target = link.getAttribute('href');
+            
+            // Add hiding class for animation
+            offcanvas.classList.add('hiding');
+            
+            // Wait for animation to complete before hiding and navigating
+            setTimeout(() => {
+                bsOffcanvas.hide();
+                window.location.hash = target;
+                // Remove the hiding class after the menu is closed
+                setTimeout(() => {
+                    offcanvas.classList.remove('hiding');
+                }, 500);
+            }, 300);
+        });
+    });
 });

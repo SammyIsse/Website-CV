@@ -74,6 +74,11 @@ header {
 .offcanvas {
     background-color: var(--darker);
     width: 250px;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.offcanvas.hiding {
+    transform: translateX(-100%) !important;
 }
 
 .offcanvas-title {
