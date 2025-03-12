@@ -1,0 +1,416 @@
+:root {
+    --primary-color: #2ECC71;    /* Vibrant green */
+    --secondary-color: #E74C3C;  /* Coral red */
+    --tertiary-color: #3498DB;   /* Blue */
+    --dark: #1a1a1a;            /* Almost black */
+    --darker: #141414;          /* Darker shade */
+    --light: #f5f5f5;          /* Almost white */
+    --gray: #2c2c2c;           /* Dark gray */
+}
+
+body {
+    background-color: var(--dark);
+    position: relative;
+    font-family: 'Arial', sans-serif;
+    color: var(--light);
+}
+
+/* Artistic background pattern */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 10% 20%, rgba(46, 204, 113, 0.05) 0%, transparent 20%),
+        radial-gradient(circle at 90% 50%, rgba(46, 204, 113, 0.05) 0%, transparent 25%),
+        radial-gradient(circle at 40% 80%, rgba(46, 204, 113, 0.05) 0%, transparent 15%),
+        linear-gradient(45deg, transparent 48%, rgba(46, 204, 113, 0.03) 49%, rgba(46, 204, 113, 0.03) 51%, transparent 52%),
+        linear-gradient(-45deg, transparent 48%, rgba(46, 204, 113, 0.03) 49%, rgba(46, 204, 113, 0.03) 51%, transparent 52%);
+    background-size: 100% 100%, 100% 100%, 100% 100%, 30px 30px, 30px 30px;
+    z-index: -1;
+}
+
+/* Header Styles */
+header {
+    background-color: var(--darker);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.navbar {
+    padding: 1rem;
+    min-height: 70px; /* Add fixed height to ensure proper centering */
+}
+
+.container-fluid {
+    position: relative;
+}
+
+.navbar-brand {
+    color: var(--primary-color) !important;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    margin: 0;
+    width: fit-content;
+    text-align: center;
+}
+
+.navbar-toggler {
+    border: none;
+    color: var(--primary-color);
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    z-index: 1; /* Ensure the button stays above */
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+/* Offcanvas Styles */
+.offcanvas {
+    background-color: var(--darker);
+    width: 250px;
+}
+
+.offcanvas-title {
+    color: var(--primary-color);
+}
+
+.btn-close {
+    background-color: var(--primary-color);
+    opacity: 1;
+}
+
+.offcanvas .navbar-nav {
+    margin-top: 2rem;
+}
+
+.offcanvas .nav-item {
+    margin: 1rem 0;
+}
+
+.offcanvas .nav-link {
+    color: var(--light) !important;
+    font-size: 1.2rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+    padding: 0.5rem 1rem;
+}
+
+.offcanvas .nav-link:hover {
+    color: var(--primary-color) !important;
+    transform: translateX(10px);
+}
+
+/* Intro Section */
+#intro {
+    padding-top: 80px;
+}
+
+.profile-image img {
+    width: 300px;
+    height: 300px;
+    border: 8px solid var(--primary-color);
+    box-shadow: 0 0 30px rgba(46, 204, 113, 0.2);
+}
+
+.profile-text {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Content Sections */
+.content-section {
+    background-color: var(--gray);
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.content-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(46, 204, 113, 0.05) 0%, transparent 100%);
+    pointer-events: none;
+}
+
+.content-text {
+    padding: 2rem;
+}
+
+.content-text h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.year-worked {
+    color: var(--primary-color);
+
+}
+
+.content-text p {
+    color: var(--light);
+    line-height: 1.6;
+}
+
+.content-image img {
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+
+.content-image img:hover {
+    transform: scale(1.02);
+}
+
+/* Footer */
+footer {
+    background-color: var(--darker);
+    color: var(--light);
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.3);
+}
+
+/* Animation Classes */
+.hidden {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--darker);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #239B56;
+}
+
+/* Special styling for the last section */
+#section5 .content-image {
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#section5 .content-image img {
+    max-height: 400px;
+    object-fit: cover;
+    width: 100%;
+}
+
+#section5 .content-text {
+    text-align: center;
+}
+
+/* References Section Styling */
+.references-title {
+    color: var(--primary-color);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    margin-bottom: 3rem;
+}
+
+.references-container {
+    perspective: 2000px; /* Increased perspective for smoother rotation */
+}
+
+.reference-card {
+    height: 300px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    transform-origin: center;
+    perspective: 1000px;
+}
+
+.reference-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.reference-card:hover .reference-card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    padding: 2rem;
+    background: var(--gray);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    background: linear-gradient(145deg, var(--gray), var(--darker));
+}
+
+.reference-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.reference-icon i {
+    font-size: 2.5rem;
+    color: var(--dark);
+}
+
+.reference-card h3 {
+    color: var(--light);
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.reference-card .role {
+    color: var(--primary-color);
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+.card-back .description {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+    color: var(--light);
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: fit-content;
+}
+
+.contact-item i {
+    width: 20px;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.contact-item span {
+    display: inline-block;
+}
+
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background-color: var(--darker);
+        padding: 1rem;
+        margin-top: 1rem;
+        border-radius: 5px;
+    }
+}
+
+.lead {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: justify;
+    line-height: 1.6;
+    padding: 0 20px;
+}
+
+/* For the last line to be justified as well */
+.lead::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+}
+
+.image-container {
+    max-width: 800px;  /* Adjust this value to make the image smaller or larger */
+    margin: 0 auto;    /* Centers the container */
+}
+
+/* Add these styles after your existing reference card styles */
+.personal-card {
+    background: linear-gradient(145deg, var(--gray), var(--darker));
+    border: 2px solid var(--primary-color);
+}
+
+.personal-card .reference-icon {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(145deg, var(--primary-color), #27ae60);
+}
+
+.personal-card .reference-icon i {
+    font-size: 3rem;
+}
+
+.personal-card h3 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+}
+
+.personal-card .role {
+    font-size: 1.2rem;
+}
+
+.personal-card .contact-info {
+    font-size: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.personal-card .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.personal-card .contact-item i {
+    color: var(--primary-color);
+    width: 20px;
+}
