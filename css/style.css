@@ -363,6 +363,7 @@ footer {
     text-align: justify;
     line-height: 1.6;
     padding: 0 20px;
+    letter-spacing: 0.01em;
 }
 
 /* For the last line to be justified as well */
