@@ -420,3 +420,18 @@ footer {
     color: var(--primary-color);
     width: 20px;
 }
+
+@media (max-width: 768px) {
+    #references {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .reference-card {
+        height: 280px;  /* Slightly smaller height on mobile */
+    }
+
+    .reference-card .description {
+        font-size: 0.9rem;  /* Smaller font on mobile */
+    }
+}
