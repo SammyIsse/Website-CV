@@ -155,10 +155,6 @@ header {
         padding-top: 100px; /* Reduced from 120px */
     }
     
-    .profile-image {
-        margin-top: 0.5rem; /* Reduced from 1rem */
-    }
-    
     .profile-image img {
         width: 180px;
         height: 180px;
