@@ -152,7 +152,7 @@ header {
 /* Extra small devices */
 @media (max-width: 576px) {
     #intro {
-        padding-top: 100px; /* Reduced from 120px */
+        padding-top: 50px; /* Reduced from 120px */
     }
     
     .profile-image img {
