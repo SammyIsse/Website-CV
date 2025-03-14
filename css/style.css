@@ -117,7 +117,7 @@ header {
 }
 
 .profile-image {
-    margin-top: 2rem; /* Add space between navbar and image */
+    margin-top: 1rem; /* Reduced from 2rem */
 }
 
 .profile-image img {
@@ -135,11 +135,11 @@ header {
 /* Media query for mobile devices */
 @media (max-width: 768px) {
     #intro {
-        padding-top: 100px;
+        padding-top: 90px; /* Reduced from 100px */
     }
     
     .profile-image {
-        margin-top: 1.5rem; /* Slightly less margin on mobile */
+        margin-top: 0.75rem; /* Reduced from 1.5rem */
     }
     
     .profile-image img {
@@ -152,11 +152,11 @@ header {
 /* Extra small devices */
 @media (max-width: 576px) {
     #intro {
-        padding-top: 120px;
+        padding-top: 100px; /* Reduced from 120px */
     }
     
     .profile-image {
-        margin-top: 1rem; /* Even less margin on very small devices */
+        margin-top: 0.5rem; /* Reduced from 1rem */
     }
     
     .profile-image img {
