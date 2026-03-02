@@ -121,11 +121,13 @@ header {
 
 /* Intro Section */
 #intro {
-    padding-top: calc(var(--header-height) + 2rem);
-    min-height: 100dvh; /* dynamic viewport height */
+    padding-top: calc(var(--header-height) + 3rem);
+    padding-bottom: 3rem;
+    min-height: 100dvh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     gap: 2rem;
 }
 
@@ -150,7 +152,7 @@ header {
 /* Media query for mobile devices */
 @media (max-width: 768px) {
     #intro {
-        padding-top: 90px; /* Reduced from 100px */
+        padding-top: calc(var(--header-height) + 1.5rem);
     }
     
     .profile-image {
@@ -182,9 +184,9 @@ header {
     position: relative;
     overflow: hidden;
     min-height: 100dvh;
-    padding: 2rem 1rem;
-    display: grid;
-    place-items: center;
+    padding: 4rem 1rem;
+    display: flex;
+    align-items: center;
 }
 
 .content-section::before {
@@ -432,8 +434,15 @@ footer {
 }
 
 .image-container {
-    max-width: 800px;  /* Adjust this value to make the image smaller or larger */
-    margin: 0 auto;    /* Centers the container */
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.case-img {
+    max-height: 35vh;
+    width: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 /* Add these styles after your existing reference card styles */
@@ -486,10 +495,30 @@ footer {
     }
 
     .reference-card {
-        height: 280px;  /* Slightly smaller height on mobile */
+        height: 280px;
     }
 
     .reference-card .description {
-        font-size: 0.9rem;  /* Smaller font on mobile */
+        font-size: 0.9rem;
+    }
+
+    .content-section {
+        padding: 3rem 1rem;
+    }
+
+    .content-image {
+        margin-top: 1.5rem;
+    }
+
+    .content-image img {
+        max-height: 40vh;
+        width: auto;
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .case-img {
+        max-height: 25vh;
     }
 }
